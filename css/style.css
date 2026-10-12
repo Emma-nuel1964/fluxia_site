@@ -1,7 +1,8 @@
 /* ==========================================================================
    Fluxia : style du site vitrine.
-   Mise en page inspirée du site de Mova, couleurs et polices de l'application
-   (lib/core/theme/app_colors.dart). Pensé d'abord pour le téléphone.
+   Mise en page inspirée du site de Mova, couleurs de l'application
+   (lib/core/theme/app_colors.dart). Titres et textes en Inter, comme sur le
+   site de Mova. Pensé d'abord pour le téléphone.
    ========================================================================== */
 
 /* Polices hébergées dans le site : aucune requête vers Google. */
@@ -53,7 +54,8 @@
   --ombre-forte: 0 24px 60px rgba(11, 45, 69, 0.16);
   --ombre-bouton: 0 10px 24px rgba(46, 111, 224, 0.26);
 
-  --police-titre: "Inter Tight", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  /* Les titres sont en Inter, comme ceux du site de Mova. */
+  --police-titre: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --police-texte: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   --largeur: 1180px;
@@ -104,9 +106,10 @@ h2,
 h3,
 h4 {
   margin: 0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: var(--police-titre);
+  font-weight: 600;
   color: var(--texte);
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 :focus-visible{
@@ -279,22 +282,27 @@ h4 {
   background: currentColor;
 }
 
+/* Les titres reprennent ceux du site de Mova : Inter de graisse moyenne
+   (500) aux lettres resserrées pour les grands titres, Inter demi-gras (600)
+   pour les sous-titres. */
 .titre-1 {
   font-size: clamp(2.15rem, 1.45rem + 3vw, 3.4rem);
-  font-weight: 680;
+  font-weight: 500;
   line-height: 1.08;
+  letter-spacing: -0.035em;
 }
 
 .titre-2 {
   font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);
-  font-weight: 680;
-  line-height: 1.15;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
 }
 
 .titre-3 {
   font-size: 1.18rem;
-  font-weight: 650;
-  line-height: 1.3;
+  font-weight: 600;
+  line-height: 1.35;
   letter-spacing: -0.01em;
 }
 
@@ -1432,7 +1440,8 @@ html:not(.js) .lecteur-lancer {
   gap: 16px;
   min-height: 64px;
   padding: 18px 22px;
-  font: 650 16.5px/1.4 var(--police-titre);
+  font: 600 16.5px/1.4 var(--police-titre);
+  letter-spacing: -0.01em;
   list-style: none;
   cursor: pointer;
 }
@@ -1654,8 +1663,8 @@ html:not(.js) .lecteur-lancer {
 
 .citation {
   margin: 0 0 24px;
-  font: 700 clamp(1.6rem, 1.2rem + 1.6vw, 2.3rem)/1.25 var(--police-titre);
-  letter-spacing: -0.02em;
+  font: 500 clamp(1.6rem, 1.2rem + 1.6vw, 2.3rem)/1.2 var(--police-titre);
+  letter-spacing: -0.03em;
 }
 
 .encadre {

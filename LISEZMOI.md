@@ -18,6 +18,11 @@ Double-cliquez sur `index.html` : le site s'ouvre dans le navigateur, sans serve
 
 ## Où modifier quoi
 - **Les textes** : directement dans chaque fichier `.html`.
+- **Les polices** : tout le site est en **Inter**, comme le site de Mova (mova-mobility.com).
+  - Les grands titres sont en graisse moyenne (500), aux lettres resserrées : `.titre-1` et `.titre-2`.
+  - Les sous-titres sont en demi-gras (600) : `.titre-3` et les autres titres.
+  - La police des titres se règle dans `css/style.css`, avec la variable `--police-titre`.
+  - L'ancienne police des titres, Inter Tight, n'est plus utilisée. Son fichier est resté dans `polices/`.
 - **Les couleurs** : en tête de `css/style.css`, dans le bloc `:root`. Les boutons reprennent le bleu des cartes de l'application (`--degrade-app`) : un dégradé du bleu nuit `#0B2D45` au bleu vif `#2E6FE0`.
 - **Le bouton « Télécharger l'application »**, avec les logos de l'App Store et de Google Play : il ouvre pour l'instant la fenêtre « L'application arrive bientôt » (`js/site.js`). Le jour de la publication, il faudra le faire pointer vers les magasins, et utiliser les badges officiels d'Apple et de Google, que leurs règles imposent.
 - **Le menu et le pied de page** : ils sont recopiés dans chaque page. Une modification doit être faite **dans toutes les pages et dans `modeles/page-legale.html`**.
